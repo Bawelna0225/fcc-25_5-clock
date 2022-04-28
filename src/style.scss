@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  #wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    .break-session-container{
+      @extend #wrapper;
+      flex-direction: row;
+      gap: 20px;
+      button{
+        width: 50px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #break-length, #session-length{
+        font-size: 2rem;
+      }
+      .break, .session{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid;
+        border-radius: 8px;
+        .break-controls, .session-controls{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+        }
+      }
+  
+    }
+    button{
+      padding: 10px;
+      background-color: rgba(0,9,9,0.3);
+      color: #fff;
+      border-radius: 8px;
+      &:hover{
+        background-color: rgba(0,9,9,0.5);
+        cursor: pointer;
+      }
+    }
+  }
+  .timer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid;
+    padding: 100px;
+    border-radius: 8px;
+    #timer-label, #time-left{
+      font-size: 2.2rem;
+    }
+    .timer-controls{
+      display: flex;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 520px){
+    .break-session-container{
+      flex-direction: column !important;
+    }
+  }
